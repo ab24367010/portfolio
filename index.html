@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciol - Портфолио</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-inter bg-gray-900 text-gray-200">
+
+    <header class="bg-gray-800 text-white p-4 shadow-md sticky top-0 z-40">
+        <nav class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Ciol</h1>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#home" class="hover:text-gray-400">Нүүр</a></li>
+                <li><a href="#about" class="hover:text-gray-400">Миний тухай</a></li>
+                <li><a href="#skills" class="hover:text-gray-400">Ур чадвар</a></li>
+                <li><a href="#projects" class="hover:text-gray-400">Төслүүд</a></li>
+                <li><a href="#contact" class="hover:text-gray-400">Холбоо барих</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto my-8 p-4">
+        <section id="home" class="text-white text-center p-10 md:p-20 rounded-xl shadow-lg mb-8" style="background-image: url('img/bg.jpg'); background-size: cover; background-position: center;">
+            <div class="backdrop-blur-sm bg-black/30 p-6 rounded-xl">
+                <img src="img/profile.jpg" alt="Профайл зураг" class="w-40 h-40 rounded-full object-cover border-4 border-gray-700 shadow-md mx-auto mb-6">
+                <h2 class="text-4xl font-bold mb-3">Сайн байна уу, би Ciol байна!</h2>
+                <p class="text-xl text-gray-300 mb-6">Оюутан, IoT болон AI хөгжүүлэгч.</p>
+                <a href="#contact" class="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-gray-300">Холбоо барих</a>
+            </div>
+        </section>
+
+        <section id="about" class="bg-gray-800 p-8 rounded-xl mb-8">
+            <h2 class="text-3xl font-bold text-center mb-6">Миний тухай</h2>
+            <p class="text-lg text-gray-400 leading-relaxed">Программчлал, IoT, стартап сонирхогч бөгөөд одоогоор Токио Техникийн коллежид суралцаж байна. Шинийг эрэлхийлэгч бүтээлч сэтгэлгээтэй, AI болон вэб хөгжүүлэлтэд сонирхолтой.</p>
+        </section>
+
+        <section id="skills" class="bg-gray-800 p-8 rounded-xl mb-8">
+            <h2 class="text-3xl font-bold text-center mb-6">Ур чадвар</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Front-end</h3>
+                    <ul class="list-disc list-inside text-gray-400">
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>TailwindCSS</li>
+                        <li>React.js, Vue.js</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Back-end</h3>
+                    <ul class="list-disc list-inside text-gray-400">
+                        <li>Node.js, Express.js</li>
+                        <li>MongoDB, SQLite</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Бусад</h3>
+                    <ul class="list-disc list-inside text-gray-400">
+                        <li>Git & GitHub</li>
+                        <li>Docker, REST API</li>
+                        <li>IoT систем хөгжүүлэлт</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="bg-gray-800 p-8 rounded-xl mb-8">
+            <h2 class="text-3xl font-bold text-center mb-6">Төслүүд</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 hover:border-gray-500">
+                    <h3 class="text-xl font-semibold mb-2">IoT Attendance System</h3>
+                    <p class="text-gray-400 mb-4">ESP32, RFID, OLED ашиглан ирц бүртгэлийн систем хөгжүүлсэн.</p>
+                    <a href="project.html" class="text-blue-400 hover:underline">Дэлгэрэнгүй харах →</a>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 hover:border-gray-500">
+                    <h3 class="text-xl font-semibold mb-2">AI Assistant Platform</h3>
+                    <p class="text-gray-400 mb-4">ChatGPT API ашиглан олон төрлийн туслахууд нэгтгэсэн платформ.</p>
+                    <a href="project.html" class="text-blue-400 hover:underline">Дэлгэрэнгүй харах →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-gray-800 p-8 rounded-xl mb-8">
+            <h2 class="text-3xl font-bold text-center mb-6">Холбоо барих</h2>
+            <div class="text-center text-gray-300">
+                <p class="mb-2">Имэйл: <a href="mailto:ab24367010@ga.ttc.ac.jp" class="text-white hover:underline">ab24367010@ga.ttc.ac.jp</a></p>
+                <p class="mb-4">Утас: 080-9053-6482</p>
+                <div class="space-x-4">
+                    <a href="https://github.com/ab24367010" target="_blank" class="text-white hover:underline">GitHub</a>
+                    <a href="#" class="text-white hover:underline">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 text-center p-4 mt-8 shadow-inner">
+        <p>&copy; 2025 [Таны нэр]. Бүх эрх хуулиар хамгаалагдсан.</p>
+    </footer>
+
+    <!-- Chatbot Container -->
+    <div id="chatbot-container" class="fixed bottom-6 right-6 w-80 h-[500px] bg-gray-800 border border-gray-700 rounded-xl shadow-2xl flex flex-col overflow-hidden z-50 transform origin-bottom-right">
+        <div class="chatbot-header bg-black text-white p-3 flex justify-between items-center rounded-t-xl cursor-grab">
+            <h3 class="text-lg font-semibold">Чатбот</h3>
+            <button id="chatbot-toggle" class="text-white text-xl">&times;</button>
+        </div>
+        <div id="chatbot-messages" class="flex-grow p-4 overflow-y-auto space-y-3 bg-gray-900"></div>
+        <div id="chatbot-options" class="p-4 border-t border-gray-700 bg-gray-800 flex flex-col space-y-2"></div>
+    </div>
+
+    <!-- Open Button -->
+    <button id="chatbot-open-btn" class="fixed bottom-6 right-6 bg-white text-black p-4 rounded-full shadow-lg text-lg z-40 hover:bg-gray-300 transform hover:scale-105">
+        💬
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

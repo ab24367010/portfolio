@@ -1,0 +1,35 @@
+/* Нэмэлт CSS загварууд */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Чатботын мессежний загвар */
+.message {
+    padding: 10px 14px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+.message.user {
+    background-color: #374151; /* Dark Gray */
+    color: #fff;
+    align-self: flex-end;
+    border-radius: 12px 12px 0 12px;
+}
+.message.bot {
+    background-color: #E5E7EB; /* Light Gray */
+    color: #1F2937;
+    align-self: flex-start;
+    border-radius: 12px 12px 12px 0;
+}
+
+/* Чатбот нээх/хаах анимац */
+#chatbot-container.closed {
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+#chatbot-container.open {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
