@@ -6,7 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatbotMessages = document.getElementById('chatbot-messages');
     const chatbotOptions = document.getElementById('chatbot-options');
     const chatbotHeader = document.querySelector('.chatbot-header');
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
+        menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+});
     let chatbotData = {}; // JSON-оос ачаалсан мэдээлэл
     let currentStep = 0;
 
