@@ -33,3 +33,28 @@ body {
     opacity: 1;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
+
+/* project.html-аас зөөсөн загварууд */
+.monochrome-img {
+    filter: grayscale(100%) contrast(1.1);
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.monochrome-img:hover {
+    filter: grayscale(0%) contrast(1);
+    transform: scale(1.02);
+}
+
+.back-button {
+    background-color: #374151; /* gray-700 */
+    color: #F9FAFB; /* gray-50 */
+    padding: 12px 24px;
+    border-radius: 9999px; /* fully rounded */
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: #4B5563; /* gray-600 */
+    transform: translateY(-2px);
+}

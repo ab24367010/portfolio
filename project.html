@@ -8,45 +8,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Монохром эффектүүд */
-        .monochrome-img {
-            filter: grayscale(100%) contrast(1.1);
-            /* Хар цагаан, контраст нэмэх */
-            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-        }
-
-        .monochrome-img:hover {
-            filter: grayscale(0%) contrast(1);
-            /* Хуусах үед өнгөтэй болгох, контрастыг хэвийн болгох */
-            transform: scale(1.02);
-        }
-
-        .back-button {
-            background-color: #374151;
-            /* gray-700 */
-            color: #F9FAFB;
-            /* gray-50 */
-            padding: 12px 24px;
-            border-radius: 9999px;
-            /* fully rounded */
-            font-weight: 600;
-            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-        }
-
-        .back-button:hover {
-            background-color: #4B5563;
-            /* gray-600 */
-            transform: translateY(-2px);
-        }
-    </style>
 </head>
 
 <body class="font-inter bg-gray-900 text-gray-200">
 
     <header class="bg-gray-800 text-white p-4 shadow-md sticky top-0 z-40">
         <nav class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold rounded-md">[Таны нэр]</h1>
+            <h1 class="text-2xl font-bold rounded-md">Batkhishig Altan-Ochir</h1>
             <ul class="hidden md:flex space-x-6">
                 <li><a href="index.html#home" class="hover:text-gray-400 transition duration-300">Нүүр</a></li>
                 <li><a href="index.html#about" class="hover:text-gray-400 transition duration-300">Миний тухай</a></li>
@@ -133,7 +101,7 @@
     </main>
 
     <footer class="bg-gray-800 text-gray-400 text-center p-4 mt-8 shadow-inner">
-        <p>&copy; 2025 [Таны нэр]. Бүх эрх хуулиар хамгаалагдсан.</p>
+        <p>&copy; 2025 Batkhishig Altan-Ochir. Бүх эрх хуулиар хамгаалагдсан.</p>
     </footer>
 
     <div id="chatbot-container"
@@ -145,9 +113,7 @@
         </div>
         <div id="chatbot-messages" class="flex-grow p-4 overflow-y-auto space-y-3 bg-gray-900">
         </div>
-        <!-- Энд input, send хэсгийг устгаад оронд нь товчлууруудыг харуулах div нэмсэн -->
         <div id="chatbot-options" class="p-4 border-t border-gray-700 bg-gray-800 flex flex-col space-y-2">
-            <!-- Сонголтууд энд динамикаар үүсэх болно -->
         </div>
     </div>
 

@@ -9,9 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
 
+    // Hamburger menu-ний event listener
+    if (menuBtn && menu) {
         menuBtn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-});
+            menu.classList.toggle('hidden');
+        });
+    }
+
     let chatbotData = {}; // JSON-оос ачаалсан мэдээлэл
     let currentStep = 0;
 
@@ -44,9 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (chatbotData.answers && chatbotData.answers[optionId]) {
-            displayMessage('bot', chatbotData.answers[optionId]);
+            setTimeout(() => {
+                displayMessage('bot', chatbotData.answers[optionId]);
+            }, 300);
         } else {
-            displayMessage('bot', 'Хариулт олдсонгүй.');
+            setTimeout(() => {
+                displayMessage('bot', 'Хариулт олдсонгүй.');
+            }, 300);
         }
 
         currentStep++;
@@ -55,10 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nextOptions.length > 0) {
             setTimeout(() => {
                 displayOptions(nextOptions);
-            }, 500);
+            }, 800);
         } else {
             setTimeout(() => {
-                displayMessage('bot', 'Яриа дууслаа. Шинэ асуулт сонгоно уу ⬇️');
+                displayMessage('bot', 'Яриа дууслаа. Шинэ асуулт сонгоно уу. 👇');
                 currentStep = 0;
                 chatbotOptions.innerHTML = '';
                 displayOptions(chatbotData.steps[0].questions);
@@ -71,9 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         for (const step of chatbotData.steps) {
             for (const key in step) {
                 if (Array.isArray(step[key])) {
-                    const found = step[key].find(opt => opt.id === id);
-                    if (found) return found;
-                } else if (key === 'questions') {
                     const found = step[key].find(opt => opt.id === id);
                     if (found) return found;
                 }

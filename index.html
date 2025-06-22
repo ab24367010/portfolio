@@ -15,12 +15,10 @@
         <nav class="container mx-auto flex justify-between items-center relative">
             <h1 class="text-2xl font-bold">Ciol</h1>
 
-            <!-- Hamburger button -->
             <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
                 ☰
             </button>
 
-            <!-- Navigation menu -->
             <ul id="menu" class="hidden md:flex flex-col md:flex-row md:space-x-6 absolute md:static top-16 left-0 right-0 bg-gray-800 md:bg-transparent w-full md:w-auto rounded-lg md:rounded-none p-4 md:p-0 z-50">
                 <li><a href="#home" class="block py-2 hover:text-gray-400">Home</a></li>
                 <li><a href="#about" class="block py-2 hover:text-gray-400">About me</a></li>
@@ -100,7 +98,7 @@
                 <div class="space-x-4">
                     <a href="https://github.com/ab24367010" class="text-white hover:underline">GitHub</a>
                     <a href="https://instagram.com/__ciol__ft/" class="text-white hover:underline">Instagram</a>
-                    <a href="https://facebook.com/ciol ft/" class="text-white hover:underline">Facebook</a>
+                    <a href="https://facebook.com/ciolft/" class="text-white hover:underline">Facebook</a>
                 </div>
             </div>
         </section>
@@ -110,7 +108,6 @@
         <p>&copy; 2025 Batkhishig Altan-Ochir. Бүх эрх хуулиар хамгаалагдсан.</p>
     </footer>
 
-    <!-- Chatbot Container -->
     <div id="chatbot-container" class="fixed bottom-6 right-6 w-80 h-[500px] bg-gray-800 border border-gray-700 rounded-xl shadow-2xl flex flex-col overflow-hidden z-50 transform origin-bottom-right">
         <div class="chatbot-header bg-black text-white p-3 flex justify-between items-center rounded-t-xl cursor-grab">
             <h3 class="text-lg font-semibold">Чатбот</h3>
@@ -120,20 +117,10 @@
         <div id="chatbot-options" class="p-4 border-t border-gray-700 bg-gray-800 flex flex-col space-y-2"></div>
     </div>
 
-    <!-- Open Button -->
     <button id="chatbot-open-btn" class="fixed bottom-6 right-6 bg-white text-black p-4 rounded-full shadow-lg text-lg z-40 hover:bg-gray-300 transform hover:scale-105">
         💬
     </button>
-
-    <!-- JS Scripts -->
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const menu = document.getElementById('menu');
-
-        menuBtn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>
