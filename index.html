@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="mn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="font-inter bg-gray-900 text-gray-200">
 
     <header class="bg-gray-800 text-white p-4 shadow-md sticky top-0 z-40">
         <nav class="container mx-auto flex justify-between items-center relative">
-            <h1 class="text-2xl font-bold">Ciol</h1>
+            <h1 class="text-2xl font-bold">CIOL FT</h1>
 
             <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
                 ☰
             </button>
 
-            <ul id="menu" class="hidden md:flex flex-col md:flex-row md:space-x-6 absolute md:static top-16 left-0 right-0 bg-gray-800 md:bg-transparent w-full md:w-auto rounded-lg md:rounded-none p-4 md:p-0 z-50">
+            <ul id="menu"
+                class="hidden md:flex flex-col md:flex-row md:space-x-6 absolute md:static top-16 left-0 right-0 bg-gray-800 md:bg-transparent w-full md:w-auto rounded-lg md:rounded-none p-4 md:p-0 z-50">
                 <li><a href="#home" class="block py-2 hover:text-gray-400">Home</a></li>
                 <li><a href="#about" class="block py-2 hover:text-gray-400">About me</a></li>
                 <li><a href="#skills" class="block py-2 hover:text-gray-400">Skill</a></li>
@@ -30,22 +33,37 @@
     </header>
 
     <main class="container mx-auto my-8 p-4">
-        <section id="home" class="text-white text-center p-10 md:p-20 rounded-xl shadow-lg mb-8" style="background-image: url('img/bg.jpg'); background-size: cover; background-position: center;">
+        <section id="home" class="text-white text-center p-10 md:p-20 rounded-xl shadow-lg mb-8"
+            style="background-image: url('img/bg.jpg'); background-size: cover; background-position: center;">
             <div class="backdrop-blur-sm bg-black/30 p-6 rounded-xl">
-                <img src="img/profile.jpg" alt="Профайл зураг" class="w-40 h-40 rounded-full object-cover border-4 border-gray-700 shadow-md mx-auto mb-6">
-                <h2 class="text-4xl font-bold mb-3">Batkhishig Altan-Ochir</h2>
-                <p class="text-xl text-gray-300 mb-6">Оюутан, IoT болон AI хөгжүүлэгч.</p>
-                <a href="#contact" class="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-gray-300">Холбоо барих</a>
+                <img src="img/profile.jpg" alt="Профайл зураг"
+                    class="w-40 h-40 rounded-full object-cover border-4 border-gray-700 shadow-md mx-auto mb-6">
+                <h2 class="text-4xl font-bold mb-3">BATKHISHIG ALTAN-OCHIR</h2>
+                <p class="text-xl text-gray-300 mb-6">I’m currently studying Information Technology, IoT, and
+                    Artificial Intelligence at Tokyo Technical College in Japan. I’m passionate about technology,
+                    curious to
+                    explore new ideas, and enjoy working on creative and practical projects. I have experience working
+                    with
+                    technologies such as React, Firebase, ESP32, and Python.</p>
+                <a href="#contact"
+                    class="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-gray-300">CONTACT</a>
             </div>
         </section>
 
         <section id="about" class="bg-gray-800 p-8 rounded-xl mb-8">
-            <h2 class="text-3xl font-bold text-center mb-6">Миний тухай</h2>
-            <p class="text-lg text-gray-400 leading-relaxed">Программчлал, IoT, стартап сонирхогч бөгөөд одоогоор Токио Техникийн коллежид суралцаж байна. Шинийг эрэлхийлэгч бүтээлч сэтгэлгээтэй, AI болон вэб хөгжүүлэлтэд сонирхолтой.</p>
+            <h2 class="text-3xl font-bold text-center mb-6">About me</h2>
+            <p class="text-lg text-gray-400 leading-relaxed">My name is Batkhishig Altan-Ochir. I was born on April 9,
+                2003, in Mongolia.
+                I’m the middle child in a family of five. Currently, I live in Japan and study IoT (Internet of
+                Things) and Artificial Intelligence at Tokyo Technical College.
+
+                I am passionate about technology and enjoy creating innovative and practical solutions. I’ve been
+                working with technologies such as React, Firebase, ESP32, Arduino, and Python, and have experience
+                developing web applications, smart devices, and educational support platforms.</p>
         </section>
 
         <section id="skills" class="bg-gray-800 p-8 rounded-xl mb-8">
-            <h2 class="text-3xl font-bold text-center mb-6">Ур чадвар</h2>
+            <h2 class="text-3xl font-bold text-center mb-6">Skills</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-gray-900 p-6 rounded-lg">
                     <h3 class="text-xl font-semibold mb-2">Front-end</h3>
@@ -64,10 +82,10 @@
                     </ul>
                 </div>
                 <div class="bg-gray-900 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-2">Бусад</h3>
+                    <h3 class="text-xl font-semibold mb-2">Other</h3>
                     <ul class="list-disc list-inside text-gray-400">
                         <li>Git & GitHub</li>
-                        <li>Docker, REST API</li>
+                        <li>Docker, REST API, AWS</li>
                         <li>IoT систем хөгжүүлэлт</li>
                     </ul>
                 </div>
@@ -75,52 +93,67 @@
         </section>
 
         <section id="projects" class="bg-gray-800 p-8 rounded-xl mb-8">
-            <h2 class="text-3xl font-bold text-center mb-6">Төслүүд</h2>
+            <h2 class="text-3xl font-bold text-center mb-6">Projects</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 hover:border-gray-500">
-                    <h3 class="text-xl font-semibold mb-2">IoT Attendance System</h3>
+                    <h3 class="text-xl font-semibold mb-2">NFC Attendance system</h3>
                     <p class="text-gray-400 mb-4">ESP32, RFID, OLED ашиглан ирц бүртгэлийн систем хөгжүүлсэн.</p>
-                    <a href="project.html" class="text-blue-400 hover:underline">Дэлгэрэнгүй харах →</a>
+                    <a href="project.html" class="text-blue-400 hover:underline">See more →</a>
                 </div>
                 <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 hover:border-gray-500">
-                    <h3 class="text-xl font-semibold mb-2">AI Assistant Platform</h3>
+                    <h3 class="text-xl font-semibold mb-2">WEB Sites</h3>
                     <p class="text-gray-400 mb-4">ChatGPT API ашиглан олон төрлийн туслахууд нэгтгэсэн платформ.</p>
-                    <a href="project.html" class="text-blue-400 hover:underline">Дэлгэрэнгүй харах →</a>
+                    <a href="404.html" class="text-blue-400 hover:underline">See more →</a>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="bg-gray-800 p-8 rounded-xl mb-8">
-            <h2 class="text-3xl font-bold text-center mb-6">Холбоо барих</h2>
+            <h2 class="text-3xl font-bold text-center mb-6">Contact</h2>
             <div class="text-center text-gray-300">
-                <p class="mb-2">Имэйл: <a href="mailto:ab24367010@ga.ttc.ac.jp" class="text-white hover:underline">ab24367010@ga.ttc.ac.jp</a></p>
-                <p class="mb-4">Утас: 080-9053-6482</p>
+                <p class="mb-2">Email: <a href="mailto:ab24367010@ga.ttc.ac.jp"
+                        class="text-white hover:underline">ab24367010@ga.ttc.ac.jp</a></p>
+                <p class="mb-4">Phone number: 080-9053-6482</p>
                 <div class="space-x-4">
-                    <a href="https://github.com/ab24367010" class="text-white hover:underline">GitHub</a>
-                    <a href="https://instagram.com/__ciol__ft/" class="text-white hover:underline">Instagram</a>
-                    <a href="https://facebook.com/ciolft/" class="text-white hover:underline">Facebook</a>
+                    <a href="https://github.com/ab24367010" class="text-white hover:underline" target="_blank"
+                        rel="noopener noreferrer">GitHub</a>
+                    <a href="https://instagram.com/_ciol_ft/" class="text-white hover:underline" target="_blank"
+                        rel="noopener noreferrer">Instagram</a>
+                    <a href="https://facebook.com/ciolft/" class="text-white hover:underline" target="_blank"
+                        rel="noopener noreferrer">Facebook</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="bg-gray-800 text-gray-400 text-center p-4 mt-8 shadow-inner">
-        <p>&copy; 2025 Batkhishig Altan-Ochir. Бүх эрх хуулиар хамгаалагдсан.</p>
+        <p>&copy; © 2025 Batkhishig Altan-Ochir. All rights reserved.</p>
+        <p>Views: <span id="count">0</span></p>
     </footer>
 
-    <div id="chatbot-container" class="fixed bottom-6 right-6 w-80 h-[500px] bg-gray-800 border border-gray-700 rounded-xl shadow-2xl flex flex-col overflow-hidden z-50 transform origin-bottom-right">
+    <div id="chatbot-container"
+        class="fixed bottom-6 right-6 w-80 h-[500px] bg-gray-800 border border-gray-700 rounded-xl shadow-2xl flex flex-col overflow-hidden z-50 transform origin-bottom-right">
         <div class="chatbot-header bg-black text-white p-3 flex justify-between items-center rounded-t-xl cursor-grab">
-            <h3 class="text-lg font-semibold">Чатбот</h3>
+            <h3 class="text-lg font-semibold">Ciol Bot</h3>
             <button id="chatbot-toggle" class="text-white text-xl">&times;</button>
         </div>
         <div id="chatbot-messages" class="flex-grow p-4 overflow-y-auto space-y-3 bg-gray-900"></div>
         <div id="chatbot-options" class="p-4 border-t border-gray-700 bg-gray-800 flex flex-col space-y-2"></div>
     </div>
 
-    <button id="chatbot-open-btn" class="fixed bottom-6 right-6 bg-white text-black p-4 rounded-full shadow-lg text-lg z-40 hover:bg-gray-300 transform hover:scale-105">
+    <button id="chatbot-open-btn"
+        class="fixed bottom-6 right-6 bg-white text-black p-4 rounded-full shadow-lg text-lg z-40 hover:bg-gray-300 transform hover:scale-105">
         💬
     </button>
-    
+
     <script src="script.js"></script>
+    <script>
+        fetch('https://api.countapi.xyz/hit/ab24367010-portfolio/visits')
+            .then(res => res.jsen())
+            .then(data => {
+                document.getElementById('count').innerText = data.value;
+            });
+    </script>
 </body>
+
 </html>
