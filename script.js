@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // DOM элементүүдийг сонгох
     const chatbotContainer = document.getElementById('chatbot-container');
     const chatbotToggleBtn = document.getElementById('chatbot-toggle');
     const chatbotOpenBtn = document.getElementById('chatbot-open-btn');
@@ -9,28 +8,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
 
-    // Hamburger menu-ний event listener
     if (menuBtn && menu) {
         menuBtn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
     }
 
-    let chatbotData = {}; // JSON-оос ачаалсан мэдээлэл
-    let currentStep = 0;
+    let chatbotData = {};
+    let stepHistory = [];
+    let currentId = null;
 
-    // Мессеж нэмэх функц
     function displayMessage(sender, message) {
         const messageElement = document.createElement('div');
         messageElement.classList.add('message', sender);
-        messageElement.textContent = message;
+        messageElement.innerHTML = message;
         chatbotMessages.appendChild(messageElement);
         chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
     }
 
-    // Товчлуурууд үүсгэх функц
     function displayOptions(options) {
-        chatbotOptions.innerHTML = ''; // Өмнөх сонголтуудыг арилгах
+        chatbotOptions.innerHTML = '';
         options.forEach(option => {
             const btn = document.createElement('button');
             btn.textContent = option.text;
@@ -40,8 +37,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Товчлуур дээр дарахад ажиллах функц
-    function handleOptionClick(optionId) {
+function handleOptionClick(optionId) {
+        if (optionId === 'back') {
+            if (stepHistory.length > 0) {
+                const previousId = stepHistory.pop();
+                currentId = previousId;
+
+                // --- Засварласан хэсэг ---
+                if (currentId === null) {
+                    // Хэрэв буцах үед "null" утга таарвал энэ нь хамгийн эхний цэс гэсэн үг.
+                    chatbotOptions.innerHTML = '';
+                    displayMessage('bot', '🏁 Эхлэл рүү буцлаа.');
+                    displayOptions(chatbotData.steps[0].questions);
+                } else {
+                    // Бусад тохиолдолд өмнөх цэсийг харуулна.
+                    const previousOptions = findOptionsById(previousId);
+                    chatbotOptions.innerHTML = '';
+                    displayMessage('bot', '⬅️ Буцлаа.');
+                    displayOptions(previousOptions);
+                }
+                // --- Засвар дууссан ---
+
+            } else {
+                // History хоосон үед (fallback)
+                chatbotOptions.innerHTML = '';
+                currentId = null;
+                displayMessage('bot', '🏁 Эхлэл рүү буцлаа.');
+                displayOptions(chatbotData.steps[0].questions);
+            }
+            return;
+        }
+
         const selectedOption = findOptionById(optionId);
         if (selectedOption) {
             displayMessage('user', selectedOption.text);
@@ -51,30 +77,26 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 displayMessage('bot', chatbotData.answers[optionId]);
             }, 300);
-        } else {
-            setTimeout(() => {
-                displayMessage('bot', 'Хариулт олдсонгүй.');
-            }, 300);
         }
 
-        currentStep++;
-        const nextOptions = chatbotData.steps[currentStep]?.[optionId] || [];
-
+        const nextOptions = findOptionsById(optionId);
         if (nextOptions.length > 0) {
+            stepHistory.push(currentId); // add current to history
+            currentId = optionId;
             setTimeout(() => {
                 displayOptions(nextOptions);
-            }, 800);
+            }, 600);
         } else {
             setTimeout(() => {
-                displayMessage('bot', 'Яриа дууслаа. Шинэ асуулт сонгоно уу. 👇');
-                currentStep = 0;
+                displayMessage('bot', '🎉 Яриа дууслаа. Шинэ асуултаа сонгоно уу.');
+                currentId = null;
+                stepHistory = [];
                 chatbotOptions.innerHTML = '';
                 displayOptions(chatbotData.steps[0].questions);
             }, 2000);
         }
     }
 
-    // ID-аар сонголтыг олох туслах функц
     function findOptionById(id) {
         for (const step of chatbotData.steps) {
             for (const key in step) {
@@ -87,7 +109,15 @@ document.addEventListener('DOMContentLoaded', () => {
         return null;
     }
 
-    // JSON-аас мэдээллийг ачаалж эхлэх функц
+    function findOptionsById(id) {
+        for (const step of chatbotData.steps) {
+            if (step[id]) {
+                return step[id];
+            }
+        }
+        return [];
+    }
+
     async function loadChatbotData() {
         try {
             const response = await fetch('data.json');
@@ -102,7 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Чатботын нээх/хаах товчлуурын event listener-ууд
     chatbotToggleBtn.addEventListener('click', () => {
         chatbotContainer.classList.add('closed');
         chatbotContainer.classList.remove('open');
@@ -115,10 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
         chatbotOpenBtn.style.display = 'none';
     });
 
-    // Чатботыг чирэх функц
-    let isDragging = false;
-    let offsetX, offsetY;
-
+    let isDragging = false, offsetX, offsetY;
     chatbotHeader.addEventListener('mousedown', (e) => {
         isDragging = true;
         offsetX = e.clientX - chatbotContainer.getBoundingClientRect().left;
@@ -141,7 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
         chatbotContainer.style.cursor = 'grab';
     });
 
-    // Эхлэх
     loadChatbotData();
     chatbotContainer.classList.add('closed');
 });
