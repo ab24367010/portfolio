@@ -128,7 +128,6 @@
 
     <footer class="bg-gray-800 text-gray-400 text-center p-4 mt-8 shadow-inner">
         <p>&copy; © 2025 Batkhishig Altan-Ochir. All rights reserved.</p>
-        <p>Views: <span id="count">0</span></p>
     </footer>
 
     <div id="chatbot-container"
@@ -147,13 +146,6 @@
     </button>
 
     <script src="script.js"></script>
-    <script>
-        fetch('https://api.countapi.xyz/hit/ab24367010-portfolio/visits')
-            .then(res => res.jsen())
-            .then(data => {
-                document.getElementById('count').innerText = data.value;
-            });
-    </script>
 </body>
 
 </html>
