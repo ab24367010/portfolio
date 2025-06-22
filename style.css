@@ -9,6 +9,10 @@ body {
     max-width: 80%;
     word-wrap: break-word;
 }
+#chatbot-messages {
+    display: flex;
+    flex-direction: column;
+}
 .message.user {
     background-color: #374151; /* Dark Gray */
     color: #fff;

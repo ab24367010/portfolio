@@ -65,6 +65,8 @@ function handleOptionClick(optionId) {
                 displayMessage('bot', '🏁 Эхлэл рүү буцлаа.');
                 displayOptions(chatbotData.steps[0].questions);
             }
+            chatbotOptions.scrollTop = chatbotOptions.scrollHeight;
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
             return;
         }
 
