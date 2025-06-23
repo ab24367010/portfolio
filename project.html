@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Төслийн Дэлгэрэнгүй: Цахим Дэлгүүрийн Систем</title>
+    <title>RFID Attendance system</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/projects.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -41,55 +42,52 @@
                 </svg>
                 Back
             </a>
-            <h2 class="text-4xl font-bold text-center mb-8">Цахим Дэлгүүрийн Систем</h2>
+            <h2 class="text-4xl font-bold text-center mb-8">RFID Attendance system</h2>
             <p class="text-lg leading-relaxed text-gray-300 mb-8">
-                Энэхүү төсөл нь React.js, Node.js, болон MongoDB зэрэг орчин үеийн технологиудыг ашиглан бүтээсэн бүрэн
-                хэмжээний цахим дэлгүүрийн платформ юм. Хэрэглэгчид бүтээгдэхүүн үзэх, сагсанд нэмэх, захиалга хийх,
-                харин админууд бүтээгдэхүүний мэдээллийг удирдах, захиалгыг хянах боломжтой.
+                This project aims to develop an IoT-based smart system for automating student attendance tracking. The
+                system uses an RFID card reader to capture attendance data, processes it via an ESP32 microcontroller,
+                and displays real-time feedback through an OLED screen. It automates the manual attendance process,
+                saves time, prevents fraudulent check-ins, and allows centralized data management. This scalable smart
+                solution has high potential for implementation in educational institutions.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div class="bg-gray-900 p-6 rounded-lg shadow-md border border-gray-700">
-                    <img src="https://placehold.co/600x400/1F2937/F9FAFB?text=Бүтээгдэхүүний+Хуудас"
-                        alt="Төслийн зураг 1: Бүтээгдэхүүний хуудас"
+                    <img src="img/esp32.jpg" alt="Төслийн зураг 1: Бүтээгдэхүүний хуудас"
                         class="w-full h-auto rounded-lg mb-4 monochrome-img">
-                    <p class="text-gray-400 text-sm">Зураг 1: Бүтээгдэхүүний мэдээллийг харуулах хуудас. Энгийн бөгөөд
-                        хэрэглэгчдэд ээлтэй загвар.</p>
+                    <p class="text-gray-400 text-sm">Board 1: ESP32</p>
                 </div>
                 <div class="bg-gray-900 p-6 rounded-lg shadow-md border border-gray-700">
-                    <img src="https://placehold.co/600x400/1F2937/F9FAFB?text=Сагсны+Хуудас"
-                        alt="Төслийн зураг 2: Сагсны хуудас" class="w-full h-auto rounded-lg mb-4 monochrome-img">
-                    <p class="text-gray-400 text-sm">Зураг 2: Хэрэглэгчийн сонгосон бүтээгдэхүүнүүдийг харуулах, тоо
-                        хэмжээг тохируулах боломжтой сагсны хуудас.</p>
-                </div>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-md border border-gray-700">
-                    <img src="https://placehold.co/600x400/1F2937/F9FAFB?text=Админ+Панел"
-                        alt="Төслийн зураг 3: Админ панел" class="w-full h-auto rounded-lg mb-4 monochrome-img">
-                    <p class="text-gray-400 text-sm">Зураг 3: Админ эрхтэй хэрэглэгчдэд зориулсан бүтээгдэхүүн,
-                        захиалгыг удирдах панел.</p>
-                </div>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-md border border-gray-700">
-                    <img src="https://placehold.co/600x400/1F2937/F9FAFB?text=Хэрэглэгчийн+Профайл"
-                        alt="Төслийн зураг 4: Хэрэглэгчийн профайл"
+                    <img src="img/rfid.jpg" alt="Төслийн зураг 2: Сагсны хуудас"
                         class="w-full h-auto rounded-lg mb-4 monochrome-img">
-                    <p class="text-gray-400 text-sm">Зураг 4: Хэрэглэгчийн мэдээлэл, өмнөх захиалгын түүхийг харуулах
-                        профайл хуудас.</p>
+                    <p class="text-gray-400 text-sm">Module 1: RFID-RC522</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-md border border-gray-700">
+                    <img src="img/oled.jpg" alt="Төслийн зураг 3: Админ панел"
+                        class="w-full h-auto rounded-lg mb-4 monochrome-img">
+                    <p class="text-gray-400 text-sm">Module 2: OLED I2C 0.96inch</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-md border border-gray-700">
+                    <img src="img/scheme.jpg" alt="Төслийн зураг 4: Хэрэглэгчийн профайл"
+                        class="w-full h-auto rounded-lg mb-4 monochrome-img">
+                    <p class="text-gray-400 text-sm">scheme: ESP32, OLED, RFID-RC522</p>
                 </div>
             </div>
 
-            <h3 class="text-2xl font-bold mb-4">Хөгжүүлэлтэд Ашигласан Технологиуд:</h3>
+            <h3 class="text-2xl font-bold mb-4">Technologies Used in Development:</h3>
             <ul class="list-disc list-inside text-gray-300 mb-6 pl-4">
-                <li>**Front-end:** React.js, Redux, Tailwind CSS</li>
-                <li>**Back-end:** Node.js, Express.js</li>
-                <li>**Database:** MongoDB</li>
-                <li>**Бусад:** JWT Authentication, Stripe Payment Gateway Integration</li>
+                <li>**Front-end:** HTML, CSS, JavaScript</li>
+                <li>**Back-end:** Python, C / C++</li>
+                <li>**Database:** MySQL</li>
+                <li>**Other:** none</li>
             </ul>
 
-            <h3 class="text-2xl font-bold mb-4">Төслийн Үр Дүн ба Ач Холбогдол:</h3>
+            <h3 class="text-2xl font-bold mb-4">Project Outcomes and Significance:</h3>
             <p class="text-lg leading-relaxed text-gray-300 mb-6">
-                Энэхүү систем нь үйлчлүүлэгчдэд хялбар бөгөөд найдвартай худалдаа хийх боломжийг олгож, бизнесийн хувьд
-                үр ашигтай удирдлагын хэрэгсэл болсон. Хөгжүүлэлтийн явцад орчин үеийн вэб технологиудын гүнзгий
-                мэдлэгийг олж авсан нь энэ төслийн хамгийн том амжилт байлаа.
+                This project successfully developed an automated student attendance system using RFID, ESP32, and OLED.
+                The system displays real-time information and securely stores attendance data. It simplifies the
+                attendance process, saves time, and prevents fraudulent check-ins. As an IoT-based solution, it has
+                great potential for implementation in educational institutions.
             </p>
 
             <div class="text-center mt-8">
@@ -106,7 +104,7 @@
     </main>
 
     <footer class="bg-gray-800 text-gray-400 text-center p-4 mt-8 shadow-inner">
-        <p>&copy; © 2025 Batkhishig Altan-Ochir. All rights reserved.</p>
+        <p>&copy; 2025 Batkhishig Altan-Ochir. All rights reserved.</p>
     </footer>
 
     <div id="chatbot-container"
