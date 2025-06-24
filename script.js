@@ -9,10 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('menu');
 
     if (menuBtn && menu) {
-        menuBtn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+    menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+
+    // Цэсний бүх <a> дээр дарахад menu-гаа хаах
+    const menuItems = menu.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            menu.classList.add('hidden'); // menu хаах
         });
-    }
+    });
+}
 
     let chatbotData = {};
     let stepHistory = [];
