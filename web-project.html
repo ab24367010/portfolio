@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Sites - ChatGPT Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/projects.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-inter bg-gray-900 text-gray-200">
+
+    <header class="bg-gray-800 text-white p-4 shadow-md sticky top-0 z-40">
+        <nav class="container mx-auto flex justify-between items-center relative">
+            <h1 class="text-2xl font-bold">CIOL FT</h1>
+
+            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none" aria-label="Menu">
+                ☰
+            </button>
+
+            <ul id="menu"
+                class="hidden md:flex flex-col md:flex-row md:space-x-6 absolute md:static top-16 left-0 right-0 bg-gray-800 md:bg-transparent w-full md:w-auto rounded-lg md:rounded-none p-4 md:p-0 z-50">
+                <li><a href="index.html#home" class="menu-item block py-2 hover:text-gray-400">Home</a></li>
+                <li><a href="index.html#about" class="menu-item block py-2 hover:text-gray-400">About me</a></li>
+                <li><a href="index.html#skills" class="menu-item block py-2 hover:text-gray-400">Skill</a></li>
+                <li><a href="index.html#projects" class="menu-item block py-2 hover:text-gray-400">Projects</a></li>
+                <li><a href="index.html#contact" class="menu-item block py-2 hover:text-gray-400">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto my-8 p-4">
+        <section id="project-detail" class="bg-gray-800 p-8 rounded-xl shadow-lg mb-8">
+            <a href="index.html#projects" class="back-button inline-flex items-center mb-6">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back
+            </a>
+            <h2 class="text-4xl font-bold text-center mb-8">Web Sites - ChatGPT Platform</h2>
+            <p class="text-lg leading-relaxed text-gray-300 mb-8">
+                Энэхүү төсөл нь ChatGPT API-г ашиглан олон төрлийн туслах хэрэгслүүдийг нэг платформд нэгтгэсэн
+                вэб хөгжүүлэлтийн төсөл юм. Хэрэглэгчид өөрийн асуултад хариулт авах, текст боловсруулах,
+                мэдээлэл хайх зэрэг олон боломжуудыг ашиглах боломжтой. Платформ нь React, Firebase технологи
+                дээр суурилсан бөгөөд responsive дизайн, хурдан ажиллагаа, хэрэглэгчдэд ээлтэй интерфэйсийг санал болгодог.
+            </p>
+
+            <div class="bg-gray-900 p-6 rounded-lg shadow-md border border-gray-700 mb-8">
+                <h3 class="text-2xl font-bold mb-4 text-center">Platform Features</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-gray-800 p-4 rounded-lg">
+                        <h4 class="font-semibold text-blue-400 mb-2">💬 AI Chat Assistant</h4>
+                        <p class="text-gray-400 text-sm">ChatGPT API ашиглан ярилцах боломж</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg">
+                        <h4 class="font-semibold text-blue-400 mb-2">📝 Text Processing</h4>
+                        <p class="text-gray-400 text-sm">Текст боловсруулах, засварлах, орчуулах</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg">
+                        <h4 class="font-semibold text-blue-400 mb-2">🎓 Educational Tools</h4>
+                        <p class="text-gray-400 text-sm">Суралцахад туслах янз бүрийн хэрэгслүүд</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg">
+                        <h4 class="font-semibold text-blue-400 mb-2">🔐 User Authentication</h4>
+                        <p class="text-gray-400 text-sm">Firebase auth ашиглан аюулгүй нэвтрэлт</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">Technologies Used in Development:</h3>
+            <ul class="list-disc list-inside text-gray-300 mb-6 pl-4">
+                <li><strong>Front-end:</strong> React, HTML5, CSS3, JavaScript (ES6+), TailwindCSS</li>
+                <li><strong>Back-end:</strong> Node.js, Express.js</li>
+                <li><strong>Database:</strong> Firebase Firestore</li>
+                <li><strong>APIs:</strong> OpenAI ChatGPT API</li>
+                <li><strong>Authentication:</strong> Firebase Authentication</li>
+                <li><strong>Hosting:</strong> Firebase Hosting / Vercel</li>
+            </ul>
+
+            <h3 class="text-2xl font-bold mb-4">Project Outcomes and Significance:</h3>
+            <p class="text-lg leading-relaxed text-gray-300 mb-6">
+                Төсөл нь амжилттай дууссан бөгөөд олон хэрэглэгчдэд ашиглагдаж байна. AI технологийг
+                өдөр тутмын амьдралд хэрэглэх боломжийг бүрдүүлж, хүмүүст цаг хэмнэх, мэдлэгээ нэмэгдүүлэх
+                боломж олгож байна. Цаашид мобайл аппликэйшн хувилбар хөгжүүлэх, илүү олон хэл дэмжих,
+                нэмэлт AI функцууд нэмэх зэрэг сайжруулалт хийх төлөвлөгөөтэй.
+            </p>
+
+            <div class="bg-blue-900/30 border border-blue-700 p-6 rounded-lg mb-6">
+                <h4 class="text-xl font-bold mb-3 text-blue-300">🚀 Key Achievements:</h4>
+                <ul class="space-y-2 text-gray-300">
+                    <li>✓ 1000+ хэрэглэгч бүртгүүлсэн</li>
+                    <li>✓ 10,000+ AI хүсэлт боловсруулсан</li>
+                    <li>✓ 99.5% uptime (сүлжээний найдвартай байдал)</li>
+                    <li>✓ Responsive дизайн (бүх төхөөрөмжид ажилладаг)</li>
+                </ul>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="index.html#projects" class="back-button inline-flex items-center">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Back
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 text-center p-4 mt-8 shadow-inner">
+        <p>&copy; 2025 Batkhishig Altan-Ochir. All rights reserved.</p>
+    </footer>
+
+    <div id="chatbot-container"
+        class="fixed bottom-6 right-6 w-80 h-[500px] bg-gray-800 border border-gray-700 rounded-xl shadow-2xl flex flex-col overflow-hidden z-50 transform origin-bottom-right">
+        <div class="chatbot-header bg-black text-white p-3 flex justify-between items-center rounded-t-xl cursor-grab">
+            <h3 class="text-lg font-semibold">Ciol Bot</h3>
+            <button id="chatbot-toggle" class="text-white text-xl" aria-label="Close chatbot">&times;</button>
+        </div>
+        <div id="chatbot-messages" class="flex-grow p-4 overflow-y-auto space-y-3 bg-gray-900"></div>
+        <div id="chatbot-options" class="p-4 border-t border-gray-700 bg-gray-800 flex flex-col space-y-2"></div>
+    </div>
+
+    <button id="chatbot-open-btn"
+        class="fixed bottom-6 right-6 bg-white text-black p-4 rounded-full shadow-lg text-lg z-40 hover:bg-gray-300 transform hover:scale-105"
+        aria-label="Open chatbot">
+        💬
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

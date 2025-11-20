@@ -18,7 +18,7 @@
         <nav class="container mx-auto flex justify-between items-center relative">
             <h1 class="text-2xl font-bold">CIOL FT</h1>
 
-            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none" aria-label="Menu" aria-expanded="false">
                 ☰
             </button>
 
@@ -37,7 +37,7 @@
         <section id="home" class="text-white text-center p-10 md:p-20 rounded-xl shadow-lg mb-8"
             style="background-image: url('img/bg.jpg'); background-size: cover; background-position: center;">
             <div class="backdrop-blur-sm bg-black/30 p-6 rounded-xl">
-                <img src="img/profile.jpg" alt="Профайл зураг"
+                <img src="img/profile.jpg" alt="Профайл зураг" loading="lazy"
                     class="w-40 h-40 rounded-full object-cover border-4 border-gray-700 shadow-md mx-auto mb-6">
                 <h2 class="text-4xl font-bold mb-3">BATKHISHIG ALTAN-OCHIR</h2>
                 <p class="text-xl text-gray-300 mb-6">I’m currently studying Information Technology, IoT, and
@@ -104,14 +104,50 @@
                 <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 hover:border-gray-500">
                     <h3 class="text-xl font-semibold mb-2">WEB Sites</h3>
                     <p class="text-gray-400 mb-4">ChatGPT API ашиглан олон төрлийн туслахууд нэгтгэсэн платформ.</p>
-                    <a href="404.html" class="text-blue-400 hover:underline">See more →</a>
+                    <a href="web-project.html" class="text-blue-400 hover:underline">See more →</a>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="bg-gray-800 p-8 rounded-xl mb-8">
             <h2 class="text-3xl font-bold text-center mb-6">Contact</h2>
-            <div class="text-center text-gray-300">
+
+            <!-- Contact Form -->
+            <div class="max-w-2xl mx-auto mb-8">
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <label for="contact-name" class="block text-gray-300 mb-2">Нэр / Name *</label>
+                        <input type="text" id="contact-name" name="name" required
+                            class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500"
+                            placeholder="Таны нэр">
+                        <span class="text-red-400 text-sm hidden" id="name-error">Нэрээ оруулна уу</span>
+                    </div>
+                    <div>
+                        <label for="contact-email" class="block text-gray-300 mb-2">Имэйл / Email *</label>
+                        <input type="email" id="contact-email" name="email" required
+                            class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500"
+                            placeholder="example@email.com">
+                        <span class="text-red-400 text-sm hidden" id="email-error">Зөв имэйл хаяг оруулна уу</span>
+                    </div>
+                    <div>
+                        <label for="contact-message" class="block text-gray-300 mb-2">Мессеж / Message *</label>
+                        <textarea id="contact-message" name="message" required rows="5"
+                            class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500"
+                            placeholder="Таны мессеж..."></textarea>
+                        <span class="text-red-400 text-sm hidden" id="message-error">Мессежээ бичнэ үү</span>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition">
+                        Илгээх / Send
+                    </button>
+                    <div id="form-status" class="text-center hidden">
+                        <p class="text-green-400">Амжилттай илгээлээ! / Message sent successfully!</p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="text-center text-gray-300 border-t border-gray-700 pt-6">
                 <p class="mb-2">Email: <a href="mailto:ab24367010@ga.ttc.ac.jp"
                         class="text-white hover:underline">ab24367010@ga.ttc.ac.jp</a></p>
                 <p class="mb-4">Phone number: 080-9053-6482</p>
@@ -135,14 +171,15 @@
         class="fixed bottom-6 right-6 w-80 h-[500px] bg-gray-800 border border-gray-700 rounded-xl shadow-2xl flex flex-col overflow-hidden z-50 transform origin-bottom-right">
         <div class="chatbot-header bg-black text-white p-3 flex justify-between items-center rounded-t-xl cursor-grab">
             <h3 class="text-lg font-semibold">Ciol Bot</h3>
-            <button id="chatbot-toggle" class="text-white text-xl">&times;</button>
+            <button id="chatbot-toggle" class="text-white text-xl" aria-label="Close chatbot">&times;</button>
         </div>
         <div id="chatbot-messages" class="flex-grow p-4 overflow-y-auto space-y-3 bg-gray-900"></div>
         <div id="chatbot-options" class="p-4 border-t border-gray-700 bg-gray-800 flex flex-col space-y-2"></div>
     </div>
 
     <button id="chatbot-open-btn"
-        class="fixed bottom-6 right-6 bg-white text-black p-4 rounded-full shadow-lg text-lg z-40 hover:bg-gray-300 transform hover:scale-105">
+        class="fixed bottom-6 right-6 bg-white text-black p-4 rounded-full shadow-lg text-lg z-40 hover:bg-gray-300 transform hover:scale-105"
+        aria-label="Open chatbot">
         💬
     </button>
 
